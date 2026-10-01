@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Kinjal Pal | Python Developer | AI &amp; Backend</title>
+<meta name="description" content="Kinjal Pal's portfolio showcasing Python development, backend engineering, AI/ML projects, APIs and software development work.">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Kinjal Pal | Python Developer | AI &amp; Backend">
+<meta property="og:description" content="Python development, backend engineering, AI/ML projects, APIs and software development work.">
+<!-- TODO: after deploying, add <meta property="og:url"> and <meta property="og:image"> with your live URL -->
+<meta name="theme-color" content="#4f46e5">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%234f46e5'/%3E%3Ctext x='32' y='43' font-size='30' text-anchor='middle' fill='white' font-family='monospace' font-weight='700'%3EKP%3C/text%3E%3C/svg%3E">
+<style>
+:root{--bg:#fff;--alt:#f7f7fb;--ink:#14141f;--mute:#5b5b70;--line:#e6e6ef;--ac:#4f46e5;--ac2:#eef0ff;--r:16px;--sh:0 6px 24px rgba(20,20,40,.06);--mono:ui-monospace,SFMono-Regular,Menlo,Consolas,monospace}
+*{box-sizing:border-box}html{scroll-behavior:smooth;scroll-padding-top:76px}
+body{margin:0;font:16px/1.65 system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;color:var(--ink);background:var(--bg);-webkit-font-smoothing:antialiased}
+a{color:inherit}h1,h2,h3{line-height:1.2;margin:0;letter-spacing:-.02em}
+.wrap{max-width:1120px;margin:0 auto;padding:0 24px}
+section{padding:88px 0}section.alt{background:var(--alt);border-block:1px solid var(--line)}
+h2{font-size:clamp(1.7rem,3vw,2.2rem);margin-bottom:12px}.lead{color:var(--mute);max-width:62ch;margin:0 0 40px}
+:focus-visible{outline:3px solid var(--ac);outline-offset:3px;border-radius:6px}
+.btn{display:inline-flex;align-items:center;gap:8px;padding:11px 20px;border-radius:999px;border:1px solid var(--line);background:#fff;font:600 .95rem inherit;font-family:inherit;text-decoration:none;cursor:pointer;transition:transform .15s,box-shadow .15s,border-color .15s}
+.btn:hover{transform:translateY(-2px);box-shadow:var(--sh);border-color:#cfcfe0}
+.btn.p{background:var(--ac);border-color:var(--ac);color:#fff}.btn.p:hover{border-color:var(--ac);box-shadow:0 8px 22px rgba(79,70,229,.3)}
+.btn.off{opacity:.55;border-style:dashed}.btn.sm{padding:8px 15px;font-size:.88rem}
+/* nav */
+header{position:sticky;top:0;z-index:50;background:rgba(255,255,255,.88);backdrop-filter:blur(12px);border-bottom:1px solid var(--line)}
+nav{display:flex;align-items:center;justify-content:space-between;height:68px;gap:16px}
+.logo{font-weight:800;letter-spacing:.06em;text-decoration:none}
+.links{display:flex;gap:4px;align-items:center;list-style:none;margin:0;padding:0}
+.links a{display:block;padding:8px 11px;border-radius:8px;text-decoration:none;color:var(--mute);font-size:.93rem;font-weight:500}
+.links a:hover,.links a.on{color:var(--ac);background:var(--ac2)}
+.burger{display:none;background:none;border:1px solid var(--line);border-radius:10px;padding:8px 12px;font-size:1rem;cursor:pointer}
+/* hero */
+.hero{padding:84px 0 96px}.hero .wrap{display:grid;grid-template-columns:1.1fr .9fr;gap:48px;align-items:center}
+.hero h1{font-size:clamp(2.2rem,5vw,3.6rem);margin:16px 0 18px}
+.hero p.sub{font-size:1.15rem;color:var(--mute);max-width:54ch;margin:0 0 30px}
+.tag{display:inline-block;padding:5px 12px;border-radius:999px;background:var(--ac2);color:var(--ac);font-size:.85rem;font-weight:600}
+.cta{display:flex;flex-wrap:wrap;gap:12px;margin-bottom:22px}
+.soc{display:flex;flex-wrap:wrap;gap:18px;font-size:.95rem}.soc a{color:var(--mute);text-decoration:none;font-weight:500}.soc a:hover{color:var(--ac)}
+.term{background:#14141f;border-radius:var(--r);box-shadow:0 20px 50px rgba(20,20,60,.22);overflow:hidden;font-family:var(--mono);font-size:.92rem;color:#d8d8ea}
+.term .bar{display:flex;gap:7px;padding:12px 16px;background:#1d1d2e}.term .bar i{width:11px;height:11px;border-radius:50%;background:#444460}
+.term .bar span{margin-left:auto;font-size:.78rem;color:#8a8aa6}
+.term pre{margin:0;padding:22px 22px 26px;overflow-x:auto;line-height:1.85}
+.k{color:#a5a0ff}.f{color:#7dd3fc}.s{color:#86efac}.c{color:#7c7c99}
+.cur{display:inline-block;width:8px;height:1.05em;background:#a5a0ff;vertical-align:-2px;animation:b 1.1s steps(1) infinite}@keyframes b{50%{opacity:0}}
+/* cards */
+.grid{display:grid;gap:20px}.g3{grid-template-columns:repeat(3,1fr)}.g2{grid-template-columns:repeat(2,1fr)}
+.card{background:#fff;border:1px solid var(--line);border-radius:var(--r);padding:26px;box-shadow:var(--sh)}
+.about{display:grid;grid-template-columns:1.4fr 1fr;gap:40px}.about p{margin:0 0 16px;color:#33334a}
+.focus{list-style:none;margin:0;padding:0;display:grid;gap:12px}.focus li{padding:12px 16px;border:1px solid var(--line);border-radius:12px;background:#fff;font-weight:500}
+.focus li::before{content:"";display:inline-block;width:8px;height:8px;border-radius:50%;background:var(--ac);margin-right:12px}
+.skill h3{font-size:1.02rem;margin-bottom:14px}.chips{display:flex;flex-wrap:wrap;gap:8px}
+.chip{padding:5px 12px;border:1px solid var(--line);border-radius:8px;background:var(--alt);font-size:.88rem;font-family:var(--mono)}
+/* projects */
+.proj{display:flex;flex-direction:column;gap:14px;transition:transform .2s,box-shadow .2s}
+.proj:hover{transform:translateY(-4px);box-shadow:0 14px 34px rgba(20,20,60,.1)}
+.pn{font-family:var(--mono);color:var(--ac);font-weight:700}.cat{color:var(--mute);font-size:.85rem}
+.proj h3{font-size:1.25rem}.proj p{margin:0;color:#33334a;font-size:.95rem}
+.ps{font-size:.9rem;border-top:1px solid var(--line);padding-top:12px}.ps b{display:block;color:var(--ink);margin-top:4px}
+.proj .row{margin-top:auto;display:flex;flex-wrap:wrap;gap:8px}.proj.ph{border-style:dashed;background:var(--alt)}
+/* modal */
+dialog{border:0;border-radius:20px;padding:0;width:min(860px,94vw);max-height:90vh;box-shadow:0 30px 80px rgba(10,10,30,.35)}
+dialog::backdrop{background:rgba(15,15,30,.55);backdrop-filter:blur(3px)}
+dialog[open]{animation:pop .22s ease-out}@keyframes pop{from{opacity:0;transform:translateY(14px) scale(.98)}}
+.mh{display:flex;justify-content:space-between;gap:16px;padding:24px 28px;border-bottom:1px solid var(--line);position:sticky;top:0;background:#fff;z-index:1}
+.mb{padding:8px 28px 28px}.mb h4{margin:22px 0 8px;font-size:1rem}.mb p,.mb li{color:#33334a;font-size:.96rem}.mb ul{padding-left:20px;margin:0}
+.x{border:1px solid var(--line);background:#fff;border-radius:10px;width:38px;height:38px;font-size:1.2rem;cursor:pointer}
+.flow{display:flex;flex-wrap:wrap;gap:8px;align-items:center}.flow span{padding:7px 12px;border-radius:10px;background:var(--ac2);color:#312e81;font-size:.88rem;font-weight:600}.flow em{color:var(--mute);font-style:normal}
+.todo{color:#9a6b00;background:#fff8e6;border:1px dashed #e8c766;border-radius:8px;padding:6px 10px;font-size:.88rem}
+/* cert / edu */
+.cert{position:relative;padding:0;overflow:hidden;display:flex;flex-direction:column;transition:transform .2s,box-shadow .2s}
+.cert:hover{transform:translateY(-5px);box-shadow:0 16px 38px rgba(79,70,229,.16);border-color:#c9cdfb}
+.cert .top{height:124px;overflow:hidden;flex-direction:column;gap:14px;background:var(--ac) radial-gradient(rgba(255,255,255,.22) 1.5px,transparent 1.6px) 0 0/16px 16px;position:relative;display:flex;align-items:flex-start;justify-content:space-between;padding:14px 18px 16px}
+.cert .top::after{content:"";position:absolute;inset:0;background:linear-gradient(105deg,transparent 35%,rgba(255,255,255,.3) 50%,transparent 65%);transform:translateX(-100%);transition:transform .7s}.cert:hover .top::after{transform:translateX(100%)}
+.cert .top div{color:#fff}.cert .top small{display:block;font-size:.72rem;letter-spacing:.12em;text-transform:uppercase;opacity:.8}.cert .top b{font-size:1.2rem;letter-spacing:-.01em}
+.cert .top span{color:#fff;font-size:.8rem;font-weight:600;background:rgba(255,255,255,.18);padding:4px 11px;border-radius:999px}
+.cert .seal{position:absolute;left:22px;top:97px;width:54px;height:54px;border-radius:50%;background:#fff;border:1px solid var(--line);box-shadow:var(--sh);display:grid;place-items:center;color:var(--ac)}
+.cert .bd{padding:40px 22px 22px;display:flex;flex-direction:column;gap:6px;flex:1}
+.cert h3{font-size:1.1rem}.cert p{margin:0;color:var(--mute);font-size:.9rem}
+.cert .cta{margin:auto 0 0!important;padding-top:14px}.cert.ph{border-style:dashed;background:var(--alt)}.cert.ph .top{background:#c7c9e6}
+.tl{border-left:2px solid var(--line);padding-left:28px;position:relative}.tl::before{content:"";position:absolute;left:-7px;top:8px;width:12px;height:12px;border-radius:50%;background:var(--ac);box-shadow:0 0 0 4px var(--ac2)}
+.tl h3{font-size:1.25rem}.tl p{margin:4px 0;color:var(--mute)}
+#repos{margin-top:28px}.repo h3{font-size:1rem;word-break:break-word}.repo p{margin:6px 0 0;color:var(--mute);font-size:.88rem}
+.cb{display:flex;flex-wrap:wrap;justify-content:space-between;align-items:center;gap:20px;background:var(--ac2);border-color:#d9dcff}
+.final{text-align:center}.final .lead{margin-inline:auto}.final .cta{justify-content:center}
+footer{border-top:1px solid var(--line);padding:36px 0;color:var(--mute);font-size:.92rem}
+footer .wrap{display:flex;flex-wrap:wrap;justify-content:space-between;gap:16px}footer b{color:var(--ink)}footer .soc{gap:16px}
+.rv{opacity:0;transform:translateY(14px);transition:opacity .5s,transform .5s}.rv.in{opacity:1;transform:none}
+@media(max-width:900px){.hero .wrap,.about{grid-template-columns:1fr}.g3{grid-template-columns:1fr 1fr}.links .hide-m{display:none}}
+@media(max-width:780px){.burger{display:block}.links{position:absolute;top:68px;left:0;right:0;background:#fff;border-bottom:1px solid var(--line);flex-direction:column;align-items:stretch;padding:12px 24px;display:none}.links.open{display:flex}.nav-dl{display:none}}
+@media(max-width:640px){section{padding:64px 0}.g3,.g2{grid-template-columns:1fr}.hero{padding-top:48px}}
+@media(prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important;scroll-behavior:auto}.rv{opacity:1;transform:none}}
+</style>
+</head>
+<body>
+<a href="#main" style="position:absolute;left:-999px" class="btn">Skip to content</a>
+<header><div class="wrap"><nav aria-label="Main">
+<a class="logo" href="#home">KINJAL PAL</a>
+<button class="burger" aria-expanded="false" aria-controls="nl" aria-label="Toggle menu">Menu</button>
+<ul class="links" id="nl">
+<li><a href="#home">Home</a></li><li><a href="#about">About</a></li><li><a href="#skills">Skills</a></li><li><a href="#projects">Projects</a></li><li><a href="#certifications">Certifications</a></li><li><a href="#education">Education</a></li><li><a href="#contact">Contact</a></li>
+</ul>
+<a class="btn p sm nav-dl" data-resume download>Download Resume</a>
+</nav></div></header>
+
+<main id="main">
+<section class="hero" id="home"><div class="wrap">
+<div>
+<span class="tag">Python Developer · Backend · AI/ML · LLM Applications</span>
+<h1>Building practical software with Python, APIs &amp; AI.</h1>
+<p class="sub">BTech IT student focused on Python development, backend engineering, data processing and AI/LLM-powered applications.</p>
+<div class="cta"><a class="btn p" href="#projects">View My Projects</a><a class="btn" data-resume download>Download Resume</a></div>
+<div class="soc"><a data-link="github" target="_blank" rel="noopener">GitHub</a><a data-link="linkedin" target="_blank" rel="noopener">LinkedIn</a><a data-link="email">Email</a></div>
+</div>
+<div class="term" role="img" aria-label="Decorative Python code: a Developer class whose build method analyzes a problem, implements a solution and ships it.">
+<div class="bar"><i></i><i></i><i></i><span>developer.py</span></div>
+<pre aria-hidden="true"><span class="k">class</span> <span class="f">Developer</span>:
+
+    <span class="k">def</span> <span class="f">build</span>(self, problem):
+        solution = <span class="f">analyze</span>(problem)
+        code = <span class="f">implement</span>(solution)
+        <span class="k">return</span> <span class="f">ship</span>(code)
+
+<span class="c"># focus: Python · APIs · AI/ML</span>
+dev = <span class="f">Developer</span>()
+dev.<span class="f">build</span>(<span class="s">"real problems"</span>)<span class="cur"></span></pre>
+</div>
+</div></section>
+
+<section class="alt" id="about"><div class="wrap rv">
+<h2>About Me</h2><p class="lead">BTech IT student building software through projects.</p>
+<div class="about">
+<div>
+<p>I'm a BTech Information Technology student developing my skills in Python, backend development, APIs, databases, data structures and algorithms, and software engineering fundamentals.</p>
+<p>I learn by building: working on real projects, breaking problems into smaller parts, and writing code I can explain and improve. My recent focus is combining backend development with AI/ML, particularly LLM-based applications that use structured analysis rather than raw model output alone.</p>
+<p>I'm looking for internship and entry-level roles where I can contribute to production code and keep growing as an engineer.</p>
+</div>
+<ul class="focus"><li>Practical, project-based development</li><li>Problem solving</li><li>Software engineering fundamentals</li><li>AI/ML and LLM exploration</li></ul>
+</div></div></section>
+
+<section id="skills"><div class="wrap rv">
+<h2>Technical Skills</h2><p class="lead">Technologies I work with and am continuing to develop.</p>
+<div class="grid g3" id="skillgrid"></div>
+</div></section>
+
+<section class="alt" id="projects"><div class="wrap rv">
+<h2>Featured Projects</h2><p class="lead">Select a project to see the problem, workflow and tech stack in detail.</p>
+<div class="grid g3" id="projgrid"></div>
+</div></section>
+
+<section id="certifications"><div class="wrap rv">
+<h2>Certifications</h2><p class="lead">Completion certificates from Forage, plus space for more as I finish them.</p>
+<div class="grid g3" id="certgrid"></div>
+</div></section>
+
+<section class="alt" id="education"><div class="wrap rv">
+<h2>Education</h2><p class="lead">&nbsp;</p>
+<div class="card tl"><h3>BTech — Information Technology</h3><p>IEC College</p><p>Affiliated to Dr. A.P.J. Abdul Kalam Technical University (AKTU)</p></div>
+</div></section>
+
+<section id="code"><div class="wrap rv">
+<h2>Code &amp; Development</h2><p class="lead">My GitHub contains my projects and development work.</p>
+<a class="btn p" data-link="github" target="_blank" rel="noopener">Visit GitHub</a>
+<div class="grid g3" id="repos" aria-live="polite"></div>
+</div></section>
+
+<section class="alt" id="resume"><div class="wrap rv">
+<div class="card cb"><div><h2 style="margin-bottom:6px">Want the full picture?</h2><p style="margin:0;color:var(--mute)">Download my resume for a concise overview of my technical skills, projects and education.</p></div>
+<a class="btn p" data-resume download>Download Resume</a></div>
+</div></section>
+
+<section id="contact" class="final"><div class="wrap rv">
+<h2>Let's build something useful.</h2>
+<p class="lead">I'm open to Python development, software engineering and AI/ML internship or entry-level opportunities.</p>
+<div class="cta"><a class="btn p" data-link="email">Email Me</a><a class="btn" data-link="linkedin" target="_blank" rel="noopener">LinkedIn</a><a class="btn" data-link="github" target="_blank" rel="noopener">GitHub</a><a class="btn" data-resume download>Download Resume</a></div>
+</div></section>
+</main>
+
+<footer><div class="wrap">
+<div><b>Kinjal Pal</b><br>Python Developer | Software Developer<br>© 2026 Kinjal Pal</div>
+<div class="soc"><a data-link="github" target="_blank" rel="noopener">GitHub</a><a data-link="linkedin" target="_blank" rel="noopener">LinkedIn</a><a data-link="email">Email</a></div>
+</div></footer>
+
+<dialog id="dlg" aria-labelledby="dt"><div class="mh"><div><div class="cat" id="dc"></div><h3 id="dt" style="font-size:1.4rem"></h3></div><button class="x" aria-label="Close project details">×</button></div><div class="mb" id="db"></div></dialog>
+
+<script>
+/* ====== EDIT THIS BLOCK ====== */
+const CFG={
+  github:"https://github.com/ikinjalpal",
+  linkedin:"YOUR_LINKEDIN_URL",          // e.g. https://www.linkedin.com/in/your-id
+  email:"YOUR_EMAIL",                    // e.g. name@example.com
+  resume:"Kinjal_Pal_Python_Developer_Resume.pdf"
+};
+const PH="Add this: replace with your own details.";
+const PROJECTS=[
+{n:"01",title:"Smart Code Review Assistant",cat:"AI • Python • Developer Tools",
+ desc:"An AI-assisted code analysis application that combines static code analysis with contextual AI review to generate useful feedback for source code.",
+ problem:"Reviewing code with an LLM alone gives feedback that can be vague or disconnected from what the code actually does.",
+ solution:"A multi-stage workflow runs static analysis first and passes the findings to the AI review as context, instead of relying only on raw LLM output.",
+ flow:["Source code","AST parsing","Static &amp; security checks","Complexity estimation","Vector retrieval","AI review","Feedback"],
+ features:["Source code analysis","Static analysis","Complexity estimation","Security-oriented checks","AI-assisted review","Semantic / vector retrieval","Context-aware feedback"],
+ tech:["Python","REST APIs","AST Parsing","LLMs","Vector Search","Pandas","NumPy"],
+ contrib:null,challenges:null,future:null,
+ github:CFG.github /* TODO: link the repository, e.g. https://github.com/ikinjalpal/REPO */,demo:""/* TODO: add live demo URL */},
+{n:"02",title:"Art Portfolio Application",cat:"Web Application",
+ desc:"A dynamic portfolio application for managing artwork information, images, descriptions and presentation.",
+ problem:"Artwork needs to be presented clearly online, with images and descriptions kept organized.",
+ solution:"A responsive portfolio application that manages artwork entries and presents them as dynamic content.",
+ flow:null,
+ features:["Artwork management","Image presentation","Artwork descriptions","Responsive interface","Dynamic content","Portfolio organization"],
+ tech:null,contrib:null,challenges:null,future:null,
+ github:CFG.github /* TODO: link the repository */,demo:"https://ikinjalpal.github.io/Art-Portfolio/"},
+{n:"03",title:"Add AI/ML Project",cat:"AI • Machine Learning",placeholder:true,
+ desc:"Placeholder: replace this card with your AI/ML project.",problem:null,solution:null,flow:null,features:null,tech:null,contrib:null,challenges:null,future:null,github:"",demo:""}
+];
+const SKILLS={
+"Programming":["Python","Java","SQL"],
+"Backend & APIs":["REST APIs","API Integration","Backend Development","FastAPI / Flask"],
+"Data":["Pandas","NumPy","Data Processing","SQL"],
+"AI / ML":["Machine Learning","LLM Applications","NLP","Vector Search","AI Integration"],
+"Developer Tools":["Git","GitHub","VS Code","IntelliJ IDEA"],
+"Computer Science":["Data Structures & Algorithms","OOP","Database Concepts","Software Engineering"]};
+/* Replace each null with your real details. Leave none invented. */
+/* name/date: open each PDF, then type the exact certificate title and date shown on it */
+const CERTS=[
+{name:"Software Engineering Job Simulation" /* confirm against your PDF; add the company/program if shown */,org:"Forage",date:null,link:"https://www.theforage.com/completion-certificates/Sj7temL583QAYpHXD/E6McHJDKsQYh79moz_Sj7temL583QAYpHXD_6a3d73e9be91aa6066041088_1782416354929_completion_certificate.pdf"},
+{name:null,org:"Forage",date:null,link:"https://www.theforage.com/completion-certificates/BotenCEjm3LFxtq9A/EregFenDKXDDeTGR2_BotenCEjm3LFxtq9A_6a3d73e9be91aa6066041088_1782461186699_completion_certificate.pdf"},
+{name:null,org:null,date:null,link:""}];
+/* ====== END EDIT BLOCK ====== */
+
+const $=(s,r=document)=>r.querySelector(s),$$=(s,r=document)=>[...r.querySelectorAll(s)];
+const esc=t=>String(t).replace(/[&<>"]/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]));
+const ok=u=>u&&!/^YOUR_/.test(u);
+$$("[data-resume]").forEach(a=>a.href=CFG.resume);
+$$("[data-link]").forEach(a=>{const k=a.dataset.link,v=CFG[k];
+  if(k==="email")a.href=ok(v)?"mailto:"+v:"#contact";else a.href=ok(v)?v:"#contact";
+  if(!ok(v)){a.title="Placeholder: set "+k+" in the CFG block";a.removeAttribute("target")}});
+
+$("#skillgrid").innerHTML=Object.entries(SKILLS).map(([t,l])=>`<div class="card skill"><h3>${esc(t)}</h3><div class="chips">${l.map(x=>`<span class="chip">${esc(x)}</span>`).join("")}</div></div>`).join("");
+
+const btn=(u,label,cls="")=>ok(u)?`<a class="btn sm ${cls}" href="${esc(u)}" target="_blank" rel="noopener">${label}</a>`:`<span class="btn sm off" title="Add URL">${label} (add URL)</span>`;
+$("#projgrid").innerHTML=PROJECTS.map((p,i)=>`<article class="card proj${p.placeholder?" ph":""}">
+<div><span class="pn">${p.n}</span> <span class="cat">${esc(p.cat)}</span></div><h3>${esc(p.title)}</h3><p>${esc(p.desc)}</p>
+${p.problem?`<div class="ps">Problem<b>${esc(p.problem)}</b></div>`:""}
+${p.tech?`<div class="chips">${p.tech.map(x=>`<span class="chip">${esc(x)}</span>`).join("")}</div>`:""}
+<div class="row"><button class="btn sm p" data-i="${i}">Details</button>${btn(p.github,"GitHub")}${btn(p.demo,"Live Demo")}</div></article>`).join("");
+
+const dlg=$("#dlg");let last;
+const sec=(t,c,list)=>`<h4>${t}</h4>`+(c?(list?`<ul>${c.map(x=>`<li>${esc(x)}</li>`).join("")}</ul>`:`<p>${esc(c)}</p>`):`<p class="todo">${PH}</p>`);
+$("#projgrid").addEventListener("click",e=>{const b=e.target.closest("button[data-i]");if(!b)return;last=b;
+ const p=PROJECTS[b.dataset.i];$("#dc").textContent=p.cat;$("#dt").textContent=p.title;
+ $("#db").innerHTML=sec("Problem",p.problem)+sec("Solution",p.solution)+
+ `<h4>Architecture / Workflow</h4>`+(p.flow?`<div class="flow">${p.flow.map((x,i)=>(i?"<em>→</em>":"")+`<span>${x}</span>`).join("")}</div>`:`<p class="todo">${PH}</p>`)+
+ sec("Key Features",p.features,1)+sec("Tech Stack",p.tech,1)+sec("My Contribution",p.contrib)+sec("Challenges",p.challenges)+sec("Future Improvements",p.future)+
+ `<div class="cta" style="margin:24px 0 0">${btn(p.github,"GitHub")}${btn(p.demo,"Live Demo","p")}</div>`;
+ dlg.showModal();});
+dlg.addEventListener("click",e=>{if(e.target===dlg||e.target.closest(".x"))dlg.close()});
+dlg.addEventListener("close",()=>last&&last.focus());
+
+const seal='<svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 2l2.4 2 3.1-.3 1 3 2.7 1.6-.9 3 .9 3-2.7 1.6-1 3-3.1-.3L12 22l-2.4-2-3.1.3-1-3L2.8 15.7l.9-3-.9-3 2.7-1.6 1-3 3.1.3z"/><path d="M8.5 12l2.5 2.5 4.5-5"/></svg>';
+$("#certgrid").innerHTML=CERTS.map(c=>`<article class="card cert${c.org?"":" ph"}"><div class="top"><span>${c.org?"Forage":"Add certificate"}</span><div><small>Certificate of Completion</small><b>${c.org?"Kinjal Pal":"Your name"}</b></div></div><div class="seal">${seal}</div><div class="bd"><h3>${c.name?esc(c.name):'<span class="todo">Add certificate name</span>'}</h3><p>${c.org?esc(c.org):"Issuing organization"} · ${c.date?esc(c.date):"Date"}</p><div class="cta">${btn(c.link,"View Certificate","p")}</div></div></article>`).join("");
+
+fetch("https://api.github.com/users/ikinjalpal/repos?sort=updated&per_page=6").then(r=>r.ok?r.json():Promise.reject()).then(rs=>{
+ $("#repos").innerHTML=rs.filter(r=>!r.fork).slice(0,6).map(r=>`<a class="card repo" href="${esc(r.html_url)}" target="_blank" rel="noopener" style="text-decoration:none"><h3>${esc(r.name)}</h3><p>${esc(r.description||"No description yet.")}</p>${r.language?`<p class="chip" style="display:inline-block;margin-top:10px">${esc(r.language)}</p>`:""}</a>`).join("");
+}).catch(()=>{});
+
+const burger=$(".burger"),nl=$("#nl");
+burger.onclick=()=>{const o=nl.classList.toggle("open");burger.setAttribute("aria-expanded",o)};
+nl.addEventListener("click",e=>{if(e.target.tagName==="A"){nl.classList.remove("open");burger.setAttribute("aria-expanded",false)}});
+const io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add("in");io.unobserve(e.target)}}),{threshold:.08});
+$$(".rv").forEach(el=>io.observe(el));
+const nav=$$(".links a"),so=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting)nav.forEach(a=>a.classList.toggle("on",a.getAttribute("href")==="#"+e.target.id))}),{rootMargin:"-45% 0px -50% 0px"});
+$$("main section[id]").forEach(s=>so.observe(s));
+</script>
+</body>
+</html>
